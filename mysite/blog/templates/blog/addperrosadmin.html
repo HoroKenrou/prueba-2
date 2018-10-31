@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rescatados</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+	<div id="bloq1">
+		<center>
+		<img src="imgs/logo.png">
+		</center>
+	</div>
+		<div class="w3-container w3-black">
+		  <h2>Rescatados</h2>
+		  <input id="add"type="button" value="AGREGAR" align="right">
+		  <input id="list"type="button" value="LISTAR" align="right">
+		  <input id="del"type="button" value="ELIMINAR" align="right">
+		</div>
+		<table>
+		  <tr>
+			<th>Nombre</th>
+			<th>Raza</th>
+			<th>Descripción</th>
+			<th>Estado</th>
+			<th>Imagen</th>
+			<th></th>
+			<th>Eliminar</th>
+		  </tr>
+		  <tr>
+			<td>Bigotes</td>
+			<td>Airedale Terrier</td>
+			<td>Pequeño, alegre y barbudo</td>
+			<td>Rescatado</td>
+			<td><img src="imgs/Bigotes.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del1" value="Car"><br></td>
+		  </tr>
+		  <tr>
+			<td>Chocolate</td>
+			<td>Braco húngaro</td>
+			<td>Excelente cazador</td>
+			<td>Disponible</td>
+			<td><img src="imgs/Chocolate.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del2" value="Car"><br></td>
+		  </tr>
+		  <tr>
+			<td>Luna</td>
+			<td>Mezcla</td>
+			<td>Jugueton y alegre</td>
+			<td>Adoptado</td>
+			<td><img src="imgs/Luna.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del3" value="Car"><br></td>
+		  </tr>
+		  <tr>
+			<td>Maya</td>
+			<td>Border Terrier</td>
+			<td>Pequeño pero de una gran personalidad</td>
+			<td>Disponible</td>
+			<td><img src="imgs/Maya.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del4" value="Car"><br></td>
+		  </tr>
+		  <tr>
+			<td>Oso</td>
+			<td>Mastín Tibetano</td>
+			<td>Muy fiel y tranquilo</td>
+			<td>Disponible</td>
+			<td><img src="imgs/Oso.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del5" value="Car"><br></td>
+		  </tr>
+		  <tr>
+			<td>Pexel</td>
+			<td>West Highland White Terrier</td>
+			<td>Cariñoso y fiel amigo</td>
+			<td>Disponible</td>
+			<td><img src="imgs/Pexel.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del6" value="Car"><br></td>
+		  </tr>
+		  <tr>
+			<td>Wifi</td>
+			<td>Quiltro</td>
+			<td>Super activo y amigable</td>
+			<td>Disponible</td>
+			<td><img src="imgs/Wifi.jpg" style="width:60px;height:70px;"></td>
+			<td><input type="button" value="MODIFICAR"></td>
+			<td><input type="checkbox" name="del7" value="Car"><br></td>
+		</tr>
+		</table>
+			
+	<footer>
+		<div id="bloq2">
+				<a name="contacto"></a>
+				<center><a style="color:white">CONTACTO +56 9 1653 9912</a></center>
+			</div>
+	</footer>
+<!--estilos-->
+	<style>
+		input[type=button]{
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			margin: 6px 2px;
+			cursor: pointer;
+		}
+	
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 3px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+			
+		form {
+			width:100%;
+			font-size:20px;
+			padding-top:100px;
+		}
+		#bloq1 {
+			padding-top:30px;
+			padding-bottom:30px;
+			position:center;
+			width:100%;
+			
+			background: #85d4b7;
+		}
+		#bloq2 {
+			padding-top:150px;
+			font-size: 60px;
+			background-color:#85d4b7;
+			width:100%;
+			height:400px;
+		}
+		#add {
+			position:absolute;
+			transition: .5s ease;
+			top: 130px;
+			left: 82%;
+			padding: 6px 13px;
+		}
+		#list {
+			position:absolute;
+			transition: .5s ease;
+			top: 130px;
+			left: 72%;
+			padding: 6px 21px;
+		}
+		#del {
+			position:absolute;
+			transition: .5s ease;
+			top: 130px;
+			left: 92%;
+			padding: 6px 13px;
+		}
+	</style>
+</body>	

@@ -1,0 +1,340 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <meta charset="utf-8" /> 
+    </head>
+    <body>
+		<div class="navbar-fixed">
+			
+			<nav>
+			  <div class="nav-wrapper">
+				<img src="{% static 'img/logo.png' %}"  width="500" height="60">
+			
+				<ul class="right hide-on-med-and-down">
+				  <li><a href="#topsection">Inicio</a></li>
+				  <li><a href="#serviciossection">quienes somos</a></li>
+				  <li><a href="#servicios">servicios</a></li>
+				  <li><a href="#contacto">contáctanos</a></li>
+				</ul>
+			  </div>
+			</nav>
+		  </div>
+		  <a name="topsection"></a>
+		<div class="carousel carousel-slider">
+			<a class="carousel-item" href="#one!"><img src="{% static 'adoptados/Apolo.jpg' %}"></a>
+			<a class="carousel-item" href="#two!"><img src="{% static 'adoptados/Duque.jpg' %}"></a>
+			<a class="carousel-item" href="#three!"><img src="{% static 'adoptados/Tom.jpg' %}"></a>
+		</div>
+			
+			
+		<footer>
+			<div style="background-color:#6dccaa">
+				<center>
+				<img src="{% static 'img/redes.jpg' %}" width="300" height="60">
+				</center>	
+			</div>
+			
+			<div id="bloqc">
+				<font face="Tahoma">
+					
+					<b><h2><p align="right"><a name="serviciossection"></a>RESCATE</p></h2></b>
+				</font>
+				<font face="tahoma">
+					<sub><h5><p style="color:gray" align="right">ETAPA UNO</p></h5></sub>
+				</font>
+				<hr size=3 noshade align="right" width="7%">
+				<font face="Tahoma" size=5>
+					<p align="right" style="color:gray">
+						Rescatamos perros en situacion de peligro y/o 
+						abandono. Los rehabilitamos y los<br>
+						preparamos para buscarles un hogar.</p>
+				</font>
+				<br>
+			<img src="{% static 'img/rescate.jpg' %}" alt="rescatao" width="440" height="370" align="right">
+			</div>
+			<br><br>
+			<br><br>
+			<br><br>
+			<div>
+				<br><br>
+				<div id="bloqb">
+					<img src="{% static 'img/crowfunding.jpg' %}" alt="crow" width="440" height="370" align="top" >
+						<font face="Tahoma">
+							<b><h2><p align="left">CROWFUNDING</p></h2></b>
+						</font>
+						
+					<font face="tahoma">
+				<sub><h5><p style="color:gray" align="left">FINANCIAMIENTO</p></h5></sub>
+			</font>
+				<hr size=3 noshade align="left" width="7%">
+					<font face="Tahoma" size=5>
+						<p align="left" style="color:gray">
+							Sigue nuestras redes sociales para
+							informarte de las diversas campa&ntilde;a y<br>
+							actividades que realizamos para obtener financiamiento
+							para seguir ayudando.</p></font>
+						
+						<a class="button button5" href="{% url 'registro' %}" >REGISTRARSE</a>
+						<br><br><br>
+				</div>
+			<a name="servicios"></a>
+			<div id="bloqa">
+				<div id="bloq1">
+					<div class="container">
+						<img src="{% static 'rescatados/Oso.jpg' %}" alt="oso" class="image"height=265px width=100%>
+						<div class="overlay">
+						<div class="text">Su nombre es Oso tiene 1 año,
+						fue rescatado de una perrera
+						ilegal, es muy cariñoso y jugueton,
+						sobre todo con niños pequeños.</div>
+						</div>
+					</div>
+					<div class="container">
+						<img src="{% static 'rescatados/Maya.jpg' %}" alt="mayo" class="image1"height=265px width=100%>
+						<div class="overlay">
+						<div class="text">Su nombre es Maya tiene 3 meses,
+						fue rescatada de la calle muy maltratada,
+						una perrita muy fiel y cariñosa en busca 
+						de una familia que la cuide.</div>
+						</div>
+					</div>
+					<div class="container">	
+						<img src="{% static 'rescatados/Wifi.jpg' %}" alt="guafai" class="image2"height=265px width=100% >
+						<div class="overlay">
+						<div class="text">Su nombre es Wifi tiene 2 años,
+						fue rescatado de la calle muy desnutrido,
+						es muy tranquilo y anda en busca de alguien que cuide de el.</div>
+						</div>
+					</div>	
+				</div>
+				<div id="bloq2">
+					<div class="container">	
+						<img src="{% static 'rescatados/Chocolate.jpg' %}" alt="xoco" class="image3" height=400px width=100%>
+						<div class="overlay">
+						<div class="text">Su nombre es Chocolate tiene 4 años,
+						fue rescatado de la muerte debido a las peleas callejeras de las que participaba,
+						le encanta salir a correr, jugar, etc.
+						Esta en busca de una familia o alguien que le de amor. </div>
+						</div>
+					</div>
+					<div class="container">	
+						<img src="{% static 'rescatados/Pexel.jpg' %}" alt="pexe" class="image4"height=400px width=100%>
+						<div class="overlay">
+						<div class="text">Su nombre es Pexel tiene 5 años,
+						fue rescatado de una perrera ilegal, es un perro fiel y adorable que busca que lo cuiden.</div>
+						</div>
+					</div>	
+				</div>		
+				<div id="bloq3">
+					<div class="container">	
+						<img src="{% static 'rescatados/Bigotes.jpg' %}" alt="llegoelbigote" class="image5"height=400px width=100%>
+						<div class="overlay">
+						<div class="text">Su nombre es Bigotes tiene 4 años,
+						fue rescatado de la calle, ya que fue abandonado por sus dueños, un perro tranquilo en busca de una familia.</div>
+						</div>
+					</div>
+					<div class="container">	
+						<img src="{% static 'rescatados/Luna.jpg' %}" alt="moon" class="image6"height=400px width=100%>
+						<div class="overlay">
+						<div class="text">Su nombre es Luna tiene 5 meses,
+						fue rescatada de la calle, ya que vagaba sola por la carretera,
+						es muy tranquila y necesita de una familia.</div>
+						</div>
+					</div>	
+				</div>
+			</div>	
+			<div id="bloq4">
+				<a name="contacto"></a>
+				<center><a style="color:white">CONTACTO +56 9 1653 9912</a></center>
+			</div>
+		</footer>
+		<!--scripts-->
+		
+		<script type="text/javascript" src="{% static 'jquery-3.3.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
+
+		<script type="text/javascript">$(document).ready(function(){
+				$('.carousel').carousel();
+		});</script>
+		
+		<!--estilos-->
+		<style>
+				.carousel {
+				height:700px;
+			}
+			* {
+			box-sizing: border-box;
+			}
+
+			.column {
+				float: left;
+				width: 33.33%;
+				padding: 5px;
+			}
+
+			/* Clearfix (clear floats) */
+			.row::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+			nav {
+				background: #85d4b7;		
+			  }
+			 #bloq1 {
+				padding-top:30px;
+				padding-left:20px;
+				float:left;
+				width:33%;
+				height:200;
+			 } 
+			 #bloq2 {
+				padding-top:30px;
+				padding-left:20px;
+				float:left;
+				width:33%;
+				height:200;
+				
+			 }
+			#bloq3 {
+				padding-top:30px;
+				padding-left:20px;
+				float:left;
+				width:33%;
+				height:200;
+			 } 
+			#bloq4 {
+				padding-top:150px;
+				font-size: 60px;
+				background-color:#bfbfbf;
+				width:100%;
+				height:400px;
+				
+			 } 
+			#bloqa {
+				background:#85d4b7;
+				width:100%;
+				height:860px;
+			}
+			#bloqb {
+				padding-left:150px;
+				
+				width:100%;
+				height:100%;
+			}
+			#bloqc {
+				padding-bottom:400px;
+				padding-right:150px;
+				width:100%;
+				height:100%;
+			}
+			.button {
+				background-color: #4CAF50; 
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+			.button5 {
+				background-color: white;
+				color: black;
+				border: 2px solid #555555;
+			}
+			.container {
+				  position: relative;
+				  width: 100%;
+				}
+
+				.image {
+				  display: block;
+				  width: 100%;
+				  height: 268px;
+				  padding-bottom:11px;
+				}
+				
+				.image1 {
+				  display: block;
+				  width: 100%;
+				  height: 268px;
+				  padding-bottom:11px;
+				}
+				
+				.image2 {
+				  display: block;
+				  width: 100%;
+				  height: 268px;
+				  padding-bottom:11px;
+				}
+				
+				.image3 {
+				  display: block;
+				  width: 100%;
+				  height: 385px;
+				  padding-bottom:11px;
+				}
+				
+				.image4 {
+				  display: block;
+				  width: 100%;
+				  height: 420px;
+				  padding-bottom:11px;
+				}
+				
+				.image5 {
+				  display: block;
+				  width: 100%;
+				  height: 400px;
+				  padding-bottom:11px;
+				}
+				
+				.image6 {
+				  display: block;
+				  width: 100%;
+				  height: 405px;
+				  padding-bottom:11px;
+				}
+
+				.overlay {
+				  position: absolute;
+				  top: 0;
+				  bottom: 0;
+				  left: 0;
+				  right: 0;
+				  height:100%;
+				  width: 100%;
+				  opacity: 0;
+				  transition: .5s ease;
+				  background-color: #ff3300;
+				}
+				
+
+				.container:hover .overlay {
+				  opacity: 1;
+				}
+
+				.text {
+				  color: white;
+				  font-size: 20px;
+				  position: absolute;
+				  top: 50%;
+				  left: 50%;
+				  transform: translate(-50%, -50%);
+				  -ms-transform: translate(-50%, -50%);
+				}
+		</style>
+
+	 
+    </body>
+  </html>
