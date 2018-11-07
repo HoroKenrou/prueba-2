@@ -21,7 +21,8 @@
 				  <li><a href="{% url 'index' %}">Inicio</a></li>
 				  <li><a href="#registro">Registro</a></li>
 				  <li><a href="#servicios">servicios</a></li>
-				  <li><a href="#contacto">contáctanos</a></li>
+					<li><a href="#contacto">contáctanos</a></li>
+					<li><a href="{% url 'login' %}">Login</a></li>
 				</ul>
 			  </div>
 			</nav>
@@ -45,68 +46,61 @@
 			
 			<div class="box container grey darken-3">
 			<div class="row" align="center">	
-				<form>
-				
-					<div class="row">	
-						<div class="input-field col s4">	
-							<input placeholder="Nombre Completo" id="nombre" name="nombre" type="text"  onblur="ValidarNombre()">
+				<form method="POST">
+					{% csrf_token %}
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2"> 
+							<div class="form-group">
+								<label>Nombres</label>
+								<input class="form-control" type="text" name="first_name">				
+							</div>					 		
+						</div>
+					</div>
+
+					<div class="row">
+							<div class="col-md-8 col-md-offset-2"> 
+								<div class="form-group">
+									<label>Apellidos</label>
+									<input class="form-control" type="text" name="last_name">				
+								</div>					 		
+							</div>
+						</div>
+					
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2"> 
+							<div class="form-group">
+								<label>Nombre de usuario</label>
+								<input class="form-control" type="text" name="username">				
+							</div>					 		
+						</div>
+					</div>	
+
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2"> 
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" type="text" name="email">				
+							</div>					 		
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2"> 
+							<div class="form-group">
+								<label>Contraseña</label>
+								<input class="form-control" type="password" name="password1">				
+							</div>					 		
 						</div>
 					</div>	
 					<div class="row">
-						<div class="input-field col s2">	
-							<input placeholder="Correo electronico" id="mail" type="email" class="validate">
-						</div>
-						<div class="input-field col s2">	
-							 <input type="text" id="rut" name="rut"  onblur="checkRut(this)" placeholder="Ingrese RUT">
-						</div>
-					</div>	
+							<div class="col-md-8 col-md-offset-2"> 
+								<div class="form-group">
+									<label>Confirmar Contraseña</label>
+									<input class="form-control" type="password" name="password2">				
+								</div>					 		
+							</div>
+						</div>				
 					
 					
-					<div class="row">
-						<div class="input-field col s2">
-							<input placeholder="Fecha Nacimiento" id ="calendar" name="calendar" type="text" class="datepicker" onblur="ValidarFecha()" max="31-12-2000">
-						</div>
-						<div class="input-field col s2">
-							<input placeholder="Teléfono" id="telefono" name="telefono" type="text" onblur="Validartelefono()" >	
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s4">
-							<select class="browser-default" name="region">
-								<option value="" disabled selected>Elija una region</option>
-								<option value="1">Region Metropolitana</option>
-								<option value="2">Regio de Arica y Parinacota</option>
-								<option value="3">Region de Los Lagos</option>
-								<option value="4">Region de Aysen</option>
-							 </select>	
-						</div>
-					</div>
-					<div class="row">	
-						<div class="col s4">
-							<select class="browser-default" name="comuna">
-								<option value="" disabled selected>Elija una comuna</option>
-								<option value="1">El Bosque</option>
-								<option value="2">San Bernardo</option>
-								<option value="3">Santiago</option>
-								<option value="4">Putre</option>
-								<option value="5">Arica</option>
-								<option value="6">Valdivia</option>
-								<option value="7">Los Lagos</option>
-								<option value="8">O'Higgins</option>
-							 </select>	
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s4">	
-							<select class="browser-default" name="casa">
-								<option value="" disabled selected>Elija tipo casa</option>
-								<option value="1">Casa con patio grande</option>
-								<option value="2">Casa con patio pequeño</option>
-								<option value="3">Casa sin patio</option>
-								<option value="4">Departamento</option>
-							 </select>	
-						</div>
-					</div>
 					<div class="row"	>
 						<button class="btn waves-effect waves-light" type="submit" name="action">Enviar
 							<i class="material-icons right">send</i>

@@ -1,16 +1,29 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
 <title>Rescatados</title>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"  media="screen,projection"/>
+<!--Let browser know website is optimized for mobile-->
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-	<div id="bloq1">
-		<center>
-		<img src="imgs/logo.png">
-		</center>
-	</div>
+		<div class="navbar-fixed">
+			
+				<nav>
+					<div class="nav-wrapper">
+					<img src="{% static 'img/logo.png' %}"  width="500" height="60">
+				
+					<ul class="right hide-on-med-and-down">
+						<li><a href="{% url 'login' %}">Desconectarse</a></li>
+					</ul>
+					</div>
+				</nav>
+				</div>
 		<div class="w3-container w3-black">
 		  <h2>Rescatados</h2>
 		</div>
@@ -28,7 +41,7 @@
 			<td>Airedale Terrier</td>
 			<td>Pequeño, alegre y barbudo</td>
 			<td>Rescatado</td>
-			<td><img src="imgs/Bigotes.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Bigotes.jpg' %}" style="width:60px;height:70px;"></td>
 			
 		  </tr>
 		  <tr>
@@ -36,7 +49,7 @@
 			<td>Braco húngaro</td>
 			<td>Excelente cazador</td>
 			<td>Disponible</td>
-			<td><img src="imgs/Chocolate.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Chocolate.jpg' %}" style="width:60px;height:70px;"></td>
 			<td><input type="button" value="ADOPTAR"></td>
 		  </tr>
 		  <tr>
@@ -44,14 +57,14 @@
 			<td>Mezcla</td>
 			<td>Jugueton y alegre</td>
 			<td>Adoptado</td>
-			<td><img src="imgs/Luna.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Luna.jpg' %}" style="width:60px;height:70px;"></td>
 		  </tr>
 		  <tr>
 			<td>Maya</td>
 			<td>Border Terrier</td>
 			<td>Pequeño pero de una gran personalidad</td>
 			<td>Disponible</td>
-			<td><img src="imgs/Maya.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Maya.jpg' %}" style="width:60px;height:70px;"></td>
 			<td><input type="button" value="ADOPTAR"></td>
 		  </tr>
 		  <tr>
@@ -59,7 +72,7 @@
 			<td>Mastín Tibetano</td>
 			<td>Muy fiel y tranquilo</td>
 			<td>Disponible</td>
-			<td><img src="imgs/Oso.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Oso.jpg' %}" style="width:60px;height:70px;"></td>
 			<td><input type="button" value="ADOPTAR"></td>
 		  </tr>
 		  <tr>
@@ -67,7 +80,7 @@
 			<td>West Highland White Terrier</td>
 			<td>Cariñoso y fiel amigo</td>
 			<td>Disponible</td>
-			<td><img src="imgs/Pexel.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Pexel.jpg' %}" style="width:60px;height:70px;"></td>
 			<td><input type="button" value="ADOPTAR"></td>
 		  </tr>
 		  <tr>
@@ -75,7 +88,7 @@
 			<td>Quiltro</td>
 			<td>Super activo y amigable</td>
 			<td>Disponible</td>
-			<td><img src="imgs/Wifi.jpg" style="width:60px;height:70px;"></td>
+			<td><img src="{% static 'rescatados/Wifi.jpg' %}" style="width:60px;height:70px;"></td>
 			<td><input type="button" value="ADOPTAR"></td>
 		</tr>
 		</table>
@@ -98,6 +111,10 @@
 			cursor: pointer;
 		}
 	
+		nav {
+				background: #85d4b7;		
+			  }
+
 		table {
 			font-family: arial, sans-serif;
 			border-collapse: collapse;
