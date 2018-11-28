@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'login/',LoginView.as_view(), name="login"),
+	url('accounts/', include('allauth.urls')),
 ]

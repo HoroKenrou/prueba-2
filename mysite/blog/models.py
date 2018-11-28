@@ -4,6 +4,8 @@ from django.db import models
 
 from django.db import models
 from django.utils import timezone
+from django.dispatch import receiver
+from allauth.account.signals import user_signed_up
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
@@ -37,3 +39,10 @@ class Mascota(models.Model):
     descripcion= models.CharField(max_length=100)
     estado = models.CharField(max_length=15)
     fotografia = models.ImageField()
+	
+	
+	
+@receiver(user_signed_up)
+def create_user_profile(request, user, **kwargs):
+    profile = Profile.objects.create(user=user)
+    profile.save()	
