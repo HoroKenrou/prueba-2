@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
 	'django.contrib.sites',
-
+    'social_django',
 ]
 
 SITE_ID = 1
@@ -137,41 +137,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-LOGIN_REDIRECT_URL= reverse_lazy('rescatados')
-
 
 AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
-   'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1071842916951-etl2sq7c5vj4kd22v38vjn7mfvli31ci.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'SMWfTH_m7feGJ3LOBvcL5dai'
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
-ACCOUNT_EMAIL_VERIFICATION = "none"
-SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        'METHOD': 'oauth2',
-        'SCOPE': ['email', 'public_profile', 'user_friends'],
-        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-        'INIT_PARAMS': {'cookie': True},
-        'FIELDS': [
-            'id',
-            'email',
-            'name',
-            'first_name',
-            'last_name',
-            'verified',
-            'locale',
-            'timezone',
-            'link',
-            'gender',
-            'updated_time',
-        ],
-        'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
-        'VERIFIED_EMAIL': False,
-        'VERSION': 'v2.12',
-    }
-}
 
-SOCIAL_AUTH_FACEBOOK_KEY = '268646203846803'
-SOCIAL_AUTH_FACEBOOK_SECRET = '048f7e17343a1e6172224399060f2b5b'
+LOGIN_URL = '/auth/login/google-oauth2/'
+LOGIN_REDIRECT_URL= reverse_lazy('rescatados')
+LOGOUT_REDIRECT_URL =reverse_lazy('post_list')

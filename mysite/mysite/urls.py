@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from blog.views import logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,10 +24,13 @@ urlpatterns = [
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth.views import LoginView
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'login/',LoginView.as_view(), name="login"),
-	url('accounts/', include('allauth.urls')),
+    url('', include('social_django.urls', namespace='social')),
+    url('logout/', logout_view, {'next_page': settings.LOGOUT_REDIRECT_URL},
+    name='logout'),
 ]

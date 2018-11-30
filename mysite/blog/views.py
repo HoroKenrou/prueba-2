@@ -10,7 +10,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from .forms import RegistroForm
-
+from django.contrib.auth import logout
+from .models import Post
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -26,6 +29,18 @@ def rescatados (request):
 
 def login1 (request):
     return render(request,'blog/login.html')
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect(request,'blog/post_list.html')    
+
+#def index(request):
+ #   context = {
+  #      'posts': Post.objects.order_by('-date')
+    #    if request.user.is_authenticated else []
+    #}
+
+    #return render(request, 'blog/post_list.html', context)
 
 
 #def persona_view(request):

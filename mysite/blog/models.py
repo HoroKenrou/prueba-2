@@ -41,8 +41,3 @@ class Mascota(models.Model):
     fotografia = models.ImageField()
 	
 	
-	
-@receiver(user_signed_up)
-def create_user_profile(request, user, **kwargs):
-    profile = Profile.objects.create(user=user)
-    profile.save()	
